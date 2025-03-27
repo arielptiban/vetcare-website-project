@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Pill from "./ui/Pill";
 
 
 export default function HeroSection() {
@@ -15,9 +16,7 @@ export default function HeroSection() {
                 <div className="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
-                            <span className="inline-block text-sm font-semibold bg-sage/30 text-teal px-4 py-1 rounded-full mb-4" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
-                                Clínica Veterinaria Especializada
-                            </span>
+                            <Pill text="Clínica Veterinaria Especializada" />
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-dark" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
                                 Cuidamos a tu mascota con amor y dedicación
                             </h1>
@@ -38,7 +37,7 @@ export default function HeroSection() {
                                         <img
                                             src="https://img.freepik.com/fotos-premium/retrato-perro-border-collie-gato-escondido-detras_748076-74.jpg"
                                             alt="Veterinario atendiendo a una mascota"
-                                            className="object-cover w-full h-[700px]"
+                                            className="object-cover w-full md:h-[700px]"
                                         />
                                     </div>
                                 </div>
