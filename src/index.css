@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
-@theme{
+
+
+  @theme{
+    --color-primary: #2A7475;
+    --color-secondary: #AEC1AE;
     --color-sage: #A9C9A4;
     --color-teal: #2C7373;
     --color-stone: #E0E0E0;
     --color-dark: #333333;
+    --font-primary: 'Fredoka';   
+
     
+}
+
+@layer components {
+
+  .nav-link {
+    @apply relative hover:text-primary transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary origin-bottom-right transition-transform duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
 }
