@@ -29,7 +29,7 @@ export default function AboutSection() {
                         <h2 className='font-primary text-dark text-3xl md:text-4xl font-bold mb-4 '>
                             Conoce a nuestros especialistas
                         </h2>
-                        <p className='text-dark '>
+                        <p className='text-dark/90'>
                             Profesionales altamente capacitados y apasionados por el bienestar de tus mascotas
                         </p>
                     </div>
