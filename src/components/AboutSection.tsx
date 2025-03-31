@@ -2,10 +2,24 @@
 import Pill from './ui/Pill'
 import { UserRound, BookUser } from "lucide-react";
 import { Team } from '../consts/Team';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function AboutSection() {
     const [selectedMember, setSelectedMember] = useState(Team[0]);
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add('opacity-100');
+    //                 entry.target.classList.remove('opacity-0');
+    //                 observer.unobserve(entry.target);
+    //             }
+    //         },
+    //         { threshold: 0.1 }
+    //     );
+
+    // })
     return (
         <>
             <section id='about' className='section-padding transition-opacity duration-1000 overflow-hidden'>
@@ -44,7 +58,7 @@ export default function AboutSection() {
                             </div>
                         </div>
 
-                        <div className=''>
+                        <div className='hidden md:flex'>
                             <div className='bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg'>
                                 <h3 className='text-xl font-semibold mb-6 flex items-center'>
                                     <UserRound className="mr-2 h-5 w-5 text-teal" />
@@ -56,6 +70,7 @@ export default function AboutSection() {
                                         Team.map((member, index) => (
                                             <div
                                                 key={member.name}
+                                                onClick={() => setSelectedMember(member)}
                                                 className={`p-4 rounded-xl cursor-pointer transition-all duration-300 flex items-center gap-4 ${selectedMember.name === member.name
                                                     ? 'bg-sage/30 border-l-4 border-teal shadow-md'
                                                     : 'hover:bg-sage/10'
@@ -84,7 +99,6 @@ export default function AboutSection() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </>
