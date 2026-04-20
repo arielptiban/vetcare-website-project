@@ -55,22 +55,26 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div
-                    className={` bg-white backdrop-blur-sm flex flex-col pt-20 pb-6 px-6 md:hidden transition-all duration-300 ease-in-out z-40  h-full
-                     ${isMenuOpen
-                            ? "opacity-100 translate-x-0"
-                            : "opacity-0 -translate-x-full "
-                        }
-                    `
 
-                    }>
+
+                <div
+                    className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-md px-6 pt-24 pb-6 z-40 transition-all duration-300 ease-in-out
+    ${isMenuOpen
+                            ? "opacity-100 translate-x-0 pointer-events-auto"
+                            : "opacity-0 -translate-x-full pointer-events-none"
+                        }
+  `}
+                >
                     <nav className="flex flex-col space-y-6">
                         <a href="#home" className="text-xl" onClick={closeMenu}>Inicio</a>
                         <a href="#services" className="text-xl" onClick={closeMenu}>Servicios</a>
                         <a href="#team" className="text-xl" onClick={closeMenu}>Equipo Médico</a>
                         <a href="#testimonials" className="text-xl" onClick={closeMenu}>Testimonios</a>
                         <a href="#contact" className="text-xl" onClick={closeMenu}>Contacto</a>
-                        <a href="#contact" className="btn-primary text-center mt-4" onClick={closeMenu}>Agendar Cita</a>
+                        <a href=""
+                            className="bg-primary text-white hover:bg-primary/90 px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1" >
+                            Agendar cita
+                        </a >
                     </nav>
                 </div>
 
