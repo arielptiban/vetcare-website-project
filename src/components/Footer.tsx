@@ -41,7 +41,7 @@ export default function Footer() {
                             <ul className="space-y-3">
 
                                 {
-                                    MenuLinks.map((link, index) => (
+                                    MenuLinks.map((link) => (
                                         <li>
                                             <a href={link.href} className="text-white/80 hover:text-white transition-colors duration-300">{link.link}</a>
                                         </li>

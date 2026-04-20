@@ -2,7 +2,7 @@
 import Pill from './ui/Pill'
 import { UserRound, BookUser } from "lucide-react";
 import { Team } from '../consts/Team';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function AboutSection() {
     const [selectedMember, setSelectedMember] = useState(Team[0]);
@@ -67,7 +67,7 @@ export default function AboutSection() {
 
                                 <div className="space-y-4">
                                     {
-                                        Team.map((member, index) => (
+                                        Team.map((member) => (
                                             <div
                                                 key={member.name}
                                                 onClick={() => setSelectedMember(member)}
